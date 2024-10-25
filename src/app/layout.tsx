@@ -25,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1width=device-width, initial-scale=1.0, user-scalable=no" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
