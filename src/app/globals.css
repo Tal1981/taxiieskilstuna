@@ -145,3 +145,20 @@ span.prise {
 .shadowButton {
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
+
+input[name="date"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+input[name="date"] {
+  outline-width: 0;
+
+}
