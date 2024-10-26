@@ -67,15 +67,13 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
         
                     const responseData = await response.json();
 
-                    setStatus("The message has been sent.")
+                    setStatus("Meddelandet har skickats")
 
                     email.value = "";
                     firstName.value = "";
                     lastName.value = "";
                     phone.value = "";
                     message.value = "";
-        
-                    console.log(responseData);
         
                 } catch (error) {
 
@@ -87,7 +85,7 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
         } else {
 
-            setStatus("Markera kryssrutan (I'm not a robot)");
+            setStatus("Markera kryssrutan ( Jag är inte en robot )");
 
         }
 
@@ -100,41 +98,47 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
     return(
         <form className={`max-w-md mx-auto mt-6 ${tabActive === "Kontakta" ? "block":"hidden"}`} onSubmit={handleSubmit} >
-                <p className="h-5 text-wrap pb-10 text-orange-400 font-bold underline underline-offset-8 text-center">{ status }</p>
+                
                 <div className="relative z-0 w-full mb-5 group">
-                    <input type="email" name="email" id="email" className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
-                    <label htmlFor="email" className="peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+                    <input type="email" name="email" id="email" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
+                    <label htmlFor="email" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
                 </div>
+
                 <div className="grid md:grid-cols-2 md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
-                        <input type="text" name="first_name" id="first_name" className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                        <label htmlFor="first_name" className="peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+                        <input type="text" name="first_name" id="first_name" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
+                        <label htmlFor="first_name" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
                     </div>
                     <div className="relative z-0 w-full mb-5 group">
-                        <input type="text" name="last_name" id="last_name" className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                        <label htmlFor="last_name" className="peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+                        <input type="text" name="last_name" id="last_name" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
+                        <label htmlFor="last_name" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
                     </div>
                 </div>
-                <div className="grid md:grid-cols-2 md:gap-6">
+
+                <div className="grid md:grid-cols-1 md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
-                        <input type="tel" pattern="[0-9]{10}|[0-9]{13}|^\+[0-9]{11}$" name="phone" id="phone" className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                        <label htmlFor="phone" className="peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+46735889973)</label>
+                        <input type="tel" pattern="[0-9]{10}|[0-9]{13}|^\+[0-9]{11}$" name="phone" id="phone" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
+                        <label htmlFor="phone" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+46735889973)</label>
                     </div>
                 </div>
+
                 <div className="grid  md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
-                        <label htmlFor="message" className="text-sm">Skriv ditt meddelande</label>
-                        <textarea  name="message" id="message" className="block py-2.5 px-0 w-full min-w-full min-h-28 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"  placeholder=" Skriv här ..." required />
+                        <label htmlFor="message" className="text-sm tracking-wider">Skriv ditt meddelande</label>
+                        <textarea  name="message" id="message" className="block py-2.5 px-1 w-full min-w-full min-h-28 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none"  placeholder=" Skriv här ..." required />
                     </div>
                 </div>
-                <div className="grid md:grid-cols-2 md:gap-6">
+
+                <div className="grid md:grid-cols-1 md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
-                        
                         <ReCAPTCHA sitekey="6LcZf2oqAAAAAAAML6BZCIWDU23u3I1vO4_sC1A0" onChange={setCaptcha} />
                         {/* {process.env.RECAPTCHA_SITE_KEY!} */}
                     </div>
                 </div>
-                <button disabled={ isLoading } type="submit" className={`shadowButton flex justify-center items-center gap-1 text-white text-lg mt-6 bg-orange-500 hover:bg-orange-600 focus:outline-none font-medium rounded-lg w-full sm:w-52 px-5 py-2.5 text-center active:border-0 active:border-none active:translate-y-1 focus:border-none focus:border-0 ${ isLoading? "translate-y-1 border-0 border-none": "border-b-4 border-orange-400"}`} >
+
+                <p className="h-5 text-wrap pb-5 text-orange-400 font-bold underline underline-offset-8 text-center">{ status }</p>
+
+                <button disabled={ isLoading } type="submit" className={`tracking-wider shadowButton flex justify-center items-center gap-1 text-white text-lg mt-6 bg-orange-500 hover:bg-orange-600 focus:outline-none font-medium rounded-lg w-full sm:w-52 px-5 py-2.5 text-center active:border-0 active:border-none active:translate-y-1 focus:border-none focus:border-0 ${ isLoading? "translate-y-1 border-0 border-none": "border-b-4 border-orange-400"}`} >
                     <svg className="h-5 w-5 text-slate-100"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="22" y1="2" x2="11" y2="13" />  <polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
                     <span>{ isLoading? "Loading..." : "Skicka" }</span>
                 </button>

@@ -9,7 +9,7 @@ const Card = (children: { destination: string, prise: string, old_prise: string 
             <h5 className="mb-4 text-xl font-medium">Eskilstuna ⇔ {children.destination}</h5>
             <div className="flex items-baseline">
                 <span className="prise text-5xl font-extrabold tracking-tight">{children.prise}</span>
-                <span className="text-xl font-thin ms-1">SEK</span>
+                <span className="text-xl font-normal ms-1">SEK</span>
             </div>
             <ul role="list" className="space-y-5 my-7">
                 <li className="flex items-center">

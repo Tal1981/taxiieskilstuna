@@ -19,9 +19,9 @@ function Kontakt() {
 
         <div className="w-full mt-11">
             <div>
-                <ul className="flex text-xl font-bold text-center text-gray-500 border-b border-gray-200 max-w-md mx-auto">
+                <ul className="flex text-xl font-bold text-center  border-b border-gray-200 max-w-md mx-auto mb-6">
                     <li className="me-2" onClick={() => setTabActive("Boka")}>
-                        <span  aria-current="page" className={`inline-block p-4 rounded-t-lg cursor-pointer ${tabActive === "Boka" ? "bg-orange-600 text-white":"hover:text-gray-600 hover:bg-gray-50"}`}>Boka taxi nu</span>
+                        <span  aria-current="page" className={`inline-block p-4 rounded-t-lg cursor-pointer ${tabActive === "Boka" ? "bg-orange-500 text-white":"hover:text-gray-600 hover:bg-gray-50"}`}>Boka taxi nu</span>
                     </li>
                     <li className="me-2" onClick={() => setTabActive("Kontakta")}>
                         <span className={`inline-block p-4 rounded-t-lg cursor-pointer ${tabActive === "Kontakta" ? "bg-orange-500 text-white":"hover:text-gray-600 hover:bg-gray-50"}`}>Kontakta oss</span>
