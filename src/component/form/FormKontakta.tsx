@@ -69,6 +69,8 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
                     setStatus("Meddelandet har skickats")
 
+                    console.log(responseData);
+
                     email.value = "";
                     firstName.value = "";
                     lastName.value = "";

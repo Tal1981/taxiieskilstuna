@@ -76,7 +76,9 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
         
                     const responseData = await response.json();
 
-                    setStatus("Meddelandet har skickats")
+                    setStatus("Meddelandet har skickats");
+
+                    console.log(responseData);
 
                     email.value = "";
                     firstName.value = "";
