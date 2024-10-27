@@ -150,15 +150,3 @@ span.prise {
 .shadowButton {
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
-
-/* input.flatpickr-input {
-  color: orange;
-  display: block;
-  border: 2px solid orange;
-} */
-
-/* input.flatpickr-mobile {
-  color: red;
-  display: none;
-  border: 0 solid transparent !important;
-} */
