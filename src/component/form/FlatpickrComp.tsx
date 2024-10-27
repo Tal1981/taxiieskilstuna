@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Flatpickr from 'react-flatpickr';
 import 'flatpickr/dist/flatpickr.css';
-import 'flatpickr/dist/themes/material_blue.css';
+import 'flatpickr/dist/themes/confetti.css';
 
 // ¨**[ Middleware for adding calender in the form ]**¨
 const FlatpickrComp: React.FC = () => {
@@ -19,6 +19,7 @@ const FlatpickrComp: React.FC = () => {
                         minuteIncrement: 1, // زيادة الدقائق
                         minDate: new Date(), // منع اختيار وقت ماضي
                         disableMobile: true, // منع عمل التقويم الخاص في جهاز الموبايل
+                        
                     }}
                     name="date"
                     required
