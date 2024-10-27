@@ -9,7 +9,7 @@ function Navbar( {darkMode,toggleDarkMode }:{darkMode:boolean, toggleDarkMode: (
     const isTop : boolean = UseScroll();
 
     return (
-        <section id="navbar" className={`sticky -mt-[8.1rem] top-0 z-40 p-2 ${isTop? 'opacity-100':'opacity-0 hover:opacity-100 transition-opacity duration-500'} flex flex-col flex-nowrap justify-around items-start h-fit w-full text-white ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-r from-transparent to-darkColor text-shadow'} `}>
+        <section id="navbar" className={`fixed -mt-[8.1rem] top-[130px] left-0 z-40 p-2 ${isTop? 'opacity-100':'opacity-0 hover:opacity-100 transition-opacity duration-500'} flex flex-col flex-nowrap justify-around items-start h-fit w-full max-w-full text-white ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-r from-transparent to-darkColor text-shadow'} `}>
             <div className={`flex justify-between items-center h-[60px] w-full px-4`}>
                 <Image
                     src={Img}
