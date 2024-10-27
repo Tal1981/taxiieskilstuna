@@ -6,7 +6,7 @@ const Card = (children: { destination: string, prise: string, old_prise: string 
 
     return (
         <div className="w-full max-w-sm p-4 border-2 border-orange-300 rounded-lg shadow sm:p-8">
-            <h5 className="mb-4 text-xl font-medium">Eskilstuna ⇔ {children.destination}</h5>
+            <h5 className="mb-4 text-xl font-medium text-nowrap">Eskilstuna ⇔ {children.destination}</h5>
             <div className="flex items-baseline">
                 <span className="prise text-5xl font-extrabold tracking-tight">{children.prise}</span>
                 <span className="text-xl font-normal ms-1">SEK</span>
