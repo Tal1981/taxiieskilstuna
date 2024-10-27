@@ -21,7 +21,7 @@ function Footer({darkMode}:{darkMode:boolean}) {
                         <span className="text-green-300"> taltek</span>  
                     </code>
                 </div>
-                <div className="absolute inset-0 bg-cover bg-center opacity-20"  style={{ backgroundImage: "url('../../transition/bkg_hero.jpg')", filter:filter }}></div>
+                <div className="absolute inset-0 bg-cover bg-center opacity-20 max-w-full"  style={{ backgroundImage: "url('../../transition/bkg_hero.jpg')", filter:filter }}></div>
             </div>
         </section> 
     )

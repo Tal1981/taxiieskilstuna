@@ -8,7 +8,7 @@ function Showcase({darkMode}:{darkMode:boolean}) {
 
     return (
         <section id="" className="w-full">
-            <Image className="w-full h-auto -mb-9" src={transition_2} alt="transition" width={400} height={250} />
+            <Image className="w-full max-w-full h-auto -mb-9" src={transition_2} alt="transition" width={400} height={250} />
             <Image
                 id="SHOWCASE"
                 src={'/logo_animated.gif'}
@@ -20,7 +20,7 @@ function Showcase({darkMode}:{darkMode:boolean}) {
                 sizes="max-width: 100%"
                 unoptimized={true}          
             />
-            <Image id="KONTAKT" className="w-full h-auto" src={transition_3} alt="transition" width={400} height={250} />
+            <Image id="KONTAKT" className="w-full max-w-full h-auto" src={transition_3} alt="transition" width={400} height={250} />
         </section>
     )
 }
