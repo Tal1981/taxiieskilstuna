@@ -148,7 +148,7 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
 
             <div className="grid md:grid-cols-1">
                 <label htmlFor="datetime" className="text-sm mb-1 tracking-wide block">Bokningstid</label>
-                <div className="z-0 w-full mb-5 group h-10 overflow-hidden py-2.5 px-1 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none">
+                <div className="z-0 w-full mb-5 group h-10 py-2.5 text-sm bg-transparent border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:border-blue-600 peer active:outline-none">
                     <FlatpickrComp/>
                 </div>
             </div>

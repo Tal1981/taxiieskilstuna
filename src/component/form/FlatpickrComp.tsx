@@ -22,7 +22,7 @@ const FlatpickrComp: React.FC = () => {
                     }}
                     name="date"
                     required
-                    className="bg-transparent w-full h-full border-0 border-none p-2 z-10 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="bg-transparent w-full h-full border-0  p-2 z-10 rounded focus:outline-none     block py-2.5 px-1 border-b-2 border-gray-300 appearance-none focus:ring-0 focus:border-blue-600 peer active:outline-0"
                 />    
     );
 };
