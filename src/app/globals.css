@@ -153,7 +153,7 @@ span.prise {
 
 input.flatpickr-input {
   color: red;
-  display: none;
+  display: block;
   border: 2px solid orange;
 }
 
