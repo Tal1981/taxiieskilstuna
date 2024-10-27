@@ -19,7 +19,6 @@ const FlatpickrComp: React.FC = () => {
                         minuteIncrement: 1, // زيادة الدقائق
                         minDate: new Date(), // منع اختيار وقت ماضي
                         disableMobile: true, // منع عمل التقويم الخاص في جهاز الموبايل
-                        
                     }}
                     name="date"
                     required

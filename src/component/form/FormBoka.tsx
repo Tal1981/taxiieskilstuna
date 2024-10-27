@@ -163,7 +163,6 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
             <div className="grid md:grid-cols-1 md:gap-6">
                 <div className="relative z-0 w-full mb-5 group">
                     <ReCAPTCHA sitekey="6LcZf2oqAAAAAAAML6BZCIWDU23u3I1vO4_sC1A0" onChange={setCaptcha} />
-                    {/* {process.env.RECAPTCHA_SITE_KEY!} */}
                 </div>
             </div>
 

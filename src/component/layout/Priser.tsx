@@ -17,7 +17,7 @@ function Priser() {
                 </h1>
             </div>
             <div className="flex flex-wrap justify-center items-center h-fit p-4 gap-4">
-                <Card destination="Arlanda" prise="1800" old_prise="2300"/>
+                <Card destination="Arlanda" prise="1899" old_prise="2300"/>
                 <Card destination="Skavsta" prise="1400" old_prise="1900"/>
                 <Card destination="Västerås" prise="1000" old_prise="1400"/>
                 <Card destination="Stockholm" prise="1800" old_prise="2300"/>

@@ -18,11 +18,8 @@ export const metadata: Metadata = {
   description: "billig Taxi företag i Eskiltuna i Sverige",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout( {children,}: Readonly<{children: React.ReactNode;}> ) {
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -35,4 +32,5 @@ export default function RootLayout({
       </body>
     </html>
   );
+
 }

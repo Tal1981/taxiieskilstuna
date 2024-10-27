@@ -4,10 +4,9 @@ import MenuItem from "@/navigation/MenuItem";
 import "@/app/globals.css";
 import Img from "@/../public/logo.png"; 
 
-function Navbar({darkMode,toggleDarkMode }:{darkMode:boolean, toggleDarkMode: () => void}) {
-    const isTop : boolean = UseScroll();
+function Navbar( {darkMode,toggleDarkMode }:{darkMode:boolean, toggleDarkMode: () => void} ) {
 
-    console.log(UseScroll())
+    const isTop : boolean = UseScroll();
 
     return (
         <section id="navbar" className={`sticky -mt-[8.1rem] top-0 z-40 p-2 ${isTop? 'opacity-100':'opacity-0 hover:opacity-100 transition-opacity duration-500'} flex flex-col flex-nowrap justify-around items-start h-fit w-full text-white ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-r from-transparent to-darkColor text-shadow'} `}>
