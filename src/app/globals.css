@@ -151,7 +151,14 @@ span.prise {
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
+input.flatpickr-input {
+  color: red;
+  display: none;
+  border: 2px solid orange;
+}
+
 input.flatpickr-mobile {
   color: red;
   display: none;
+  border: 0 solid transparent !important;
 }
