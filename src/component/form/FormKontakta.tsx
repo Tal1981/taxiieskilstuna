@@ -87,7 +87,7 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
         } else {
 
-            setStatus("Markera kryssrutan ( Jag är inte en robot )");
+            setStatus("Markera kryssrutan (Jag är inte en robot)");
 
         }
 
@@ -138,7 +138,7 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
                     </div>
                 </div>
 
-                <p className="h-5 text-wrap pb-5 text-orange-400 font-bold underline underline-offset-8 text-center">{ status }</p>
+                <p className="h-5 text-wrap pb-5 text-orange-400 font-medium underline underline-offset-8 text-center">{ status }</p>
 
                 <button disabled={ isLoading } type="submit" className={`tracking-wider shadowButton flex justify-center items-center gap-1 text-white text-lg mt-6 bg-orange-500 hover:bg-orange-600 focus:outline-none font-medium rounded-lg w-full sm:w-52 px-5 py-2.5 text-center active:border-0 active:border-none active:translate-y-1 focus:border-none focus:border-0 ${ isLoading? "translate-y-1 border-0 border-none": "border-b-4 border-orange-400"}`} >
                     <svg className="h-5 w-5 text-slate-100"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="22" y1="2" x2="11" y2="13" />  <polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>

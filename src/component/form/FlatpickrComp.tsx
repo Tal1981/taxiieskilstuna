@@ -18,6 +18,7 @@ const FlatpickrComp: React.FC = () => {
                         time_24hr: true, // استخدام تنسيق 24 ساعة
                         minuteIncrement: 1, // زيادة الدقائق
                         minDate: new Date(), // منع اختيار وقت ماضي
+                        disableMobile: true,
                     }}
                     name="date"
                     required
