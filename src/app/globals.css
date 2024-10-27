@@ -17,10 +17,7 @@
 body, html {
   width: auto !important;
   display: block;
-}
-
-body {
-  overflow-x: hidden !important;
+  overflow-block:hidden;
 }
 
 body {
