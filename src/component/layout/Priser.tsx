@@ -16,7 +16,7 @@ function Priser() {
                     Hej, Vi kör dig hem tryggt och säkert
                 </h1>
             </div>
-            <div className="flex flex-wrap justify-center items-center h-fit p-4 gap-4">
+            <div className="flex flex-nowrap justify-center items-center h-fit p-4 gap-4">
                 <Card destination="Arlanda flygplats" prise="1899" old_prise="2300"/>
                 <Card destination="Skavsta flygplats" prise="1399" old_prise="1900"/>
                 <Card destination="Västerås flygplats" prise="999" old_prise="1400"/>
