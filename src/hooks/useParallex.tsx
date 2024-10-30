@@ -7,7 +7,7 @@ const useParallex = () : boolean => {
 
     useEffect(() => {
             const handleParallex : () => void = () => {
-                setParallex(window.scrollY >= 630);
+                setParallex(window.scrollY >= 600);
             }
     
             window.addEventListener("scroll", handleParallex);
