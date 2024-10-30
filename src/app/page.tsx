@@ -19,7 +19,7 @@ export default function Home() {
       <Btn_up/>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <Hero darkMode={darkMode}/>
-      <Priser/>
+      <Priser darkMode={darkMode}/>
       <Showcase darkMode={darkMode}/>
       <Kontakt/>
       <Footer darkMode={darkMode}/>
