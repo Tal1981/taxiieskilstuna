@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+// import { URL } from "url";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,7 +16,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Taxi i Eskilstuna",
-  description: "billig Taxi företag i Eskiltuna i Sverige",
+  description: "ett billigt Taxi företag i Eskiltuna i Sverige, cheaper taxi in Eskilstuna in Sweden",
+  metadataBase: new URL("https://taxiieskilstuna.se"),
+  keywords: ["taxi","eskilstuna","sweden","sverige","flygplatstaxi","billig taxi","stor taxi","taxi i eskilstuna","snabb taxi","natt taxi","taxi runt 24 timmar"],
 };
 
 export default function RootLayout( {children,}: Readonly<{children: React.ReactNode;}> ) {
