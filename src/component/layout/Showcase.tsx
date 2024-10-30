@@ -2,7 +2,6 @@ import Image from 'next/image';
 
 function Showcase({darkMode}:{darkMode:boolean}) {
     
-    // const filter = darkMode ? "invert(1)":"";
     const transition_2 = darkMode ? "/transition/gray-2.svg":"/transition/yellow-2.svg"
     const transition_3 = darkMode ? "/transition/gray-3.svg":"/transition/yellow-3.svg"
 

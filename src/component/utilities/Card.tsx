@@ -6,7 +6,7 @@ const Card = (children: { destination: string, prise: string, old_prise: string,
     const parallex : boolean = useParallex();
 
     return (
-        <div className={`w-full max-w-sm p-3 border-2 border-orange-300 rounded-lg shadow sm:p-8 transition duration-[5000ms] ease-in-out ${children.darkMode? 'bg-[darkColor]':'white'} ${parallex? 'translate-x-0 opacity-100':'translate-x-[-400px] opacity-0'}`} style={{transitionDelay:`${children.delay}ms`}} >
+        <div className={`w-full max-w-sm p-3 border-2 border-orange-300 rounded-lg shadow sm:p-8 transition duration-[2000ms] ease-in-out ${children.darkMode? 'bg-[darkColor]':'white'} ${parallex? 'translate-x-0 opacity-100':'translate-x-[-400px] opacity-0'}`} style={{transitionDelay:`${children.delay}ms`}} >
             <h5 className="mb-4 text-xl font-medium text-nowrap m-0 p-0">Eskilstuna ⇔ {children.destination}</h5>
             <div className="flex items-baseline">
                 <span className="prise text-5xl font-extrabold tracking-tight">{children.prise}</span>
