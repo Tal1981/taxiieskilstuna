@@ -114,40 +114,40 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
 
             <div className="relative z-0 w-full mb-5 group">
                 <input type="email" name="email" id="email" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
-                <label htmlFor="email" className="tracking-wide peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+                <label htmlFor="email" className="tracking-wider peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
             </div>
 
             <div className="grid md:grid-cols-2 md:gap-6">
                 <div className="relative z-0 w-full mb-5 group">
                     <input type="text" name="first_name" id="first_name" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                    <label htmlFor="first_name" className="tracking-wide peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+                    <label htmlFor="first_name" className="tracking-wider peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
                 </div>
                 <div className="relative z-0 w-full mb-5 group">
                     <input type="text" name="last_name" id="last_name" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                    <label htmlFor="last_name" className="tracking-wide peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+                    <label htmlFor="last_name" className="tracking-wider peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
                 </div>
             </div>
 
             <div className="grid md:grid-cols-2 md:gap-6">
                 <div className="relative z-0 w-full mb-5 group">
                     <input type="text" name="source" id="source" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                    <label htmlFor="source" className="tracking-wide peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Från</label>
+                    <label htmlFor="source" className="tracking-wider peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Från</label>
                 </div>
                 <div className="relative z-0 w-full mb-5 group">
                     <input type="text" name="destination" id="destination" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                    <label htmlFor="destination" className="tracking-wide peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Till</label>
+                    <label htmlFor="destination" className="tracking-wider peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Till</label>
                 </div>
             </div>
 
             <div className="grid md:grid-cols-1 md:gap-6">
                 <div className="relative z-0 w-full mb-5 group">
                     <input type="tel" pattern="[0-9]{10}|[0-9]{13}|^\+[0-9]{11}$" name="phone" id="phone" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                    <label htmlFor="phone" className="tracking-wide peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+46735889973)</label>
+                    <label htmlFor="phone" className="tracking-wider peer-focus:font-medium absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+46735889973)</label>
                 </div>
             </div>
 
             <div className="grid md:grid-cols-1">
-                <label htmlFor="datetime" className="text-sm mb-1 tracking-wide block">Bokningstid</label>
+                <label htmlFor="datetime" className="text-sm mb-1 tracking-wider block">Bokningstid</label>
                 <div className="z-0 w-full mb-5 group h-10 py-2.5 text-sm bg-transparent border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:border-blue-600 peer active:outline-none">
                     <FlatpickrComp/>
                 </div>
@@ -155,7 +155,7 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
 
             <div className="grid  md:gap-6">
                 <div className="relative z-0 w-full mb-5 group">
-                    <label htmlFor="message" className="text-sm tracking-wide">Beskrivning ( valfri )</label>
+                    <label htmlFor="message" className="text-sm tracking-wider">Beskrivning ( valfri )</label>
                     <textarea  name="message" id="message" className="block py-2.5 px-1 w-full min-w-full min-h-28 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none"  placeholder=" Skriv här ..." />
                 </div>
             </div>
