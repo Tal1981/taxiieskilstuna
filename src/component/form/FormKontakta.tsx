@@ -69,6 +69,8 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
         
                     const responseData = await response.json();
 
+                    console.log(responseData);
+
                     setIsLoading(false);
                     setStatus("Meddelandet har skickats")
 
