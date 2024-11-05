@@ -23,6 +23,7 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
             const form = event.currentTarget;
 
+            // for typescript
             const email = form.elements.namedItem('email') as HTMLInputElement;
             const firstName = form.elements.namedItem('first_name') as HTMLInputElement;
             const lastName = form.elements.namedItem('last_name') as HTMLInputElement;
@@ -95,7 +96,7 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
             setIsLoading(false);
             setStatus("")
-            
+
         }, 5000)
     }
 
