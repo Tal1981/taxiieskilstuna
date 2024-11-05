@@ -29,8 +29,7 @@ export default async function API(req, res) {
     try {
         await transporter.sendMail({
             from: `"${firstName} ${lastName}" <${email}>`,
-            // to: "taxiieskilstuna@gmail.com",
-            to: "orange.2009@hotmail.com",
+            to: "taxiieskilstuna@gmail.com",
             subject: `Ett nytt meddelande: [${generateRandomNumber()}-${Date.now()}-MSG]`,
             html: `<b>((Nytt Meddelande))</b>
              <p>................................</p>
@@ -70,7 +69,7 @@ export default async function API(req, res) {
                     </thead>
                     <tbody>
                         <tr style="background:white; padding: 4px; text-wrap: wrap">
-                            <td>${message}</td>
+                            <td style="white-space:pre-wrap;">${message}</td>
                         </tr>
                     </tbody>
                 </table>`,
