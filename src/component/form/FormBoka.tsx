@@ -26,7 +26,7 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
         if( captcha ) {
 
             const form = event.currentTarget;
-            
+
             // for typescript.
             const email = form.elements.namedItem('email') as HTMLInputElement;
             const firstName = form.elements.namedItem('first_name') as HTMLInputElement;
@@ -60,6 +60,8 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
             } else {
 
                 try{
+                    setIsLoading(true);
+                    
                     const response = await fetch('/api/contact',{
                         method: 'POST',
                         headers: {
@@ -76,7 +78,7 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
         
                     const responseData = await response.json();
 
-                    setIsLoading(true);
+                    setIsLoading(false);
                     setStatus("Meddelandet har skickats");
 
                     console.log(responseData);
