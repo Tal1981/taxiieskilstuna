@@ -19,7 +19,7 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
     const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        if(captcha) {
+        if( captcha ) {
 
             const form = event.currentTarget;
 
@@ -60,7 +60,7 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
                         body:  JSON.stringify(data),
                     })
         
-                    if (!response.ok) {
+                    if ( !response.ok ) {
 
                         setStatus("Could not send your message! try again.")
                         throw new Error('Network response was not ok');
