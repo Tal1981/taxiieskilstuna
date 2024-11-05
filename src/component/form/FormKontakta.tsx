@@ -68,9 +68,8 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
         
                     const responseData = await response.json();
 
+                    setIsLoading(false);
                     setStatus("Meddelandet har skickats")
-
-                    console.log(responseData);
 
                     email.value = "";
                     firstName.value = "";
@@ -92,14 +91,10 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
         }
 
-        // setTimeout(()=> {
-
-        // }, 5000)
-
         setTimeout(()=> {
             setIsLoading(false);
             setStatus("")
-        }, 10000)
+        }, 5000)
     }
 
     return(
