@@ -46,6 +46,7 @@ a{
 
 input, textarea {
   touch-action: manipulation !important; /*لكي لايكبر حجم الشاشة عند استخدام الجوال عند مليء الفورم لقد حل مشكلة كبيرة*/
+  white-space: pre-wrap !important;
   font-size: 16px !important;
 }
 

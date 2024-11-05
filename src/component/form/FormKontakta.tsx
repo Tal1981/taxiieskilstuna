@@ -91,9 +91,8 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
         }
 
-        setIsLoading(false);
-
         setTimeout(()=> {
+            setIsLoading(false);
             setStatus("")
         }, 15000)
     }

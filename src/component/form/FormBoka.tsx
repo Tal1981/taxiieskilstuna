@@ -32,7 +32,7 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
             const firstName = form.elements.namedItem('first_name') as HTMLInputElement;
             const lastName = form.elements.namedItem('last_name') as HTMLInputElement;
             const phone = form.elements.namedItem('phone') as HTMLInputElement;
-            const source = form.elements.namedItem('source') as HTMLTextAreaElement;
+            const source = form.elements.namedItem('source') as HTMLInputElement;
             const destination = form.elements.namedItem('destination') as HTMLInputElement;
             const date = form.elements.namedItem('date') as HTMLTextAreaElement;
             const message = form.elements.namedItem('message') as HTMLTextAreaElement;
@@ -102,9 +102,8 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
 
         }
 
-        setIsLoading(false);
-
         setTimeout(()=> {
+            setIsLoading(false);
             setStatus("")
         }, 15000)
     }
