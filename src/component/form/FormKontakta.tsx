@@ -18,7 +18,6 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
     const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setIsLoading(true);
 
         if(captcha) {
 
@@ -50,6 +49,8 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
             } else {
 
                 try{
+                    setIsLoading(true);
+
                     const response = await fetch('/api/message',{
                         method: 'POST',
                         headers: {
@@ -91,13 +92,14 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
 
         }
 
-        setTimeout(()=> {
-            setIsLoading(false);
-        }, 5000)
+        // setTimeout(()=> {
+
+        // }, 5000)
 
         setTimeout(()=> {
+            setIsLoading(false);
             setStatus("")
-        }, 15000)
+        }, 10000)
     }
 
     return(
