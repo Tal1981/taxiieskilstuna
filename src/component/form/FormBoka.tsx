@@ -22,12 +22,12 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
 
     const handleSubmit = async( event: FormEvent<HTMLFormElement> ) => {
         event.preventDefault();
-        setIsLoading(true);
 
-        if(captcha) {
+        if( captcha ) {
 
             const form = event.currentTarget;
-
+            
+            // for typescript.
             const email = form.elements.namedItem('email') as HTMLInputElement;
             const firstName = form.elements.namedItem('first_name') as HTMLInputElement;
             const lastName = form.elements.namedItem('last_name') as HTMLInputElement;
@@ -76,6 +76,7 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
         
                     const responseData = await response.json();
 
+                    setIsLoading(true);
                     setStatus("Meddelandet har skickats");
 
                     console.log(responseData);
@@ -103,9 +104,11 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
         }
 
         setTimeout(()=> {
+
             setIsLoading(false);
             setStatus("")
-        }, 15000)
+
+        }, 4000)
     }
 
     return(

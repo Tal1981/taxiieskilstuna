@@ -73,14 +73,13 @@ export default async function API(req, res) {
                         </tr>
                     </tbody>
                 </table>
-                
+                <br>
                 <table style="border:2px double black; boxShadow:2px 2px 2px 2px #eee;">
                     <thead>
                         <tr style="background:orange; padding: 4px">
                             <th>Message</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr style="background:white; padding: 4px; text-wrap: wrap">
                             <td>${message}</td>
