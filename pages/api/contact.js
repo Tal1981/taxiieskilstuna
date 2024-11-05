@@ -81,7 +81,7 @@ export default async function API(req, res) {
                     </thead>
                     <tbody>
                         <tr style="background:white; padding: 4px; text-wrap: wrap">
-                            <td>${message}</td>
+                            <td style="white-space:pre-wrap;">${message}</td>
                         </tr>
                     </tbody>
                 </table>`,
