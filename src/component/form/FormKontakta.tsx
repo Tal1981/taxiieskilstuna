@@ -106,39 +106,38 @@ const FormKontakta = ({tabActive}:{tabActive:string}) => {
         <form className={`max-w-md mx-auto mt-6 ${tabActive === "Kontakta" ? "block":"hidden"}`} onSubmit={handleSubmit} >
                 
                 <div className="relative z-0 w-full mb-5 group">
-                    <input type="email" name="email" id="email" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
-                    <label htmlFor="email" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+                    <input type="email" name="email" id="email" maxLength={100} className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
+                    <label htmlFor="email" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">E-post</label>
                 </div>
 
                 <div className="grid md:grid-cols-2 md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
-                        <input type="text" name="first_name" id="first_name" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                        <label htmlFor="first_name" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+                        <input type="text" name="first_name" id="first_name" maxLength={25} className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
+                        <label htmlFor="first_name" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Förnamn</label>
                     </div>
                     <div className="relative z-0 w-full mb-5 group">
-                        <input type="text" name="last_name" id="last_name" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                        <label htmlFor="last_name" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+                        <input type="text" name="last_name" id="last_name" maxLength={25} className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
+                        <label htmlFor="last_name" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Efternamn</label>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-1 md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
-                        <input type="tel" pattern="[0-9]{10}|[0-9]{13}|^\+[0-9]{11}$" name="phone" id="phone" className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
-                        <label htmlFor="phone" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+46735889973)</label>
+                        <input type="tel" pattern="[0-9]{10}|[0-9]{13}|^\+[0-9]{11}$" name="phone" id="phone" maxLength={13} className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " required />
+                        <label htmlFor="phone" className="tracking-wider peer-focus:font-medium  absolute text-sm leading-3 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Telefonnummer (+46735889973)</label>
                     </div>
                 </div>
 
                 <div className="grid  md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
                         <label htmlFor="message" className="text-sm tracking-wider">Skriv ditt meddelande</label>
-                        <textarea  name="message" id="message" className="block py-2.5 px-1 w-full min-w-full min-h-28 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none"  placeholder=" Skriv här ..." required />
+                        <textarea  name="message" id="message" maxLength={1000} className="block py-2.5 px-1 w-full min-w-full min-h-28 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none"  placeholder=" Skriv här ..." required />
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-1 md:gap-6">
                     <div className="relative z-0 w-full mb-5 group">
                         <ReCAPTCHA sitekey="6LcZf2oqAAAAAAAML6BZCIWDU23u3I1vO4_sC1A0" onChange={setCaptcha} />
-                        {/* {process.env.RECAPTCHA_SITE_KEY!} */}
                     </div>
                 </div>
 

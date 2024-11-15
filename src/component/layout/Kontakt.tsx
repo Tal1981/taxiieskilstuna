@@ -17,7 +17,7 @@ function Kontakt() {
 
         <p className="text-center text-xl tracking-widest">Boka & beställ taxi på telefon +46-762259996 eller här online</p>
         <p className=" text-center text-base tracking-widest mt-4">
-            <a href="mailto:taxiieskilstuna?subject=Booking en taxi&body=Hej!">
+            <a href="mailto:taxiieskilstuna@gmail.com?subject=Booking en taxi&body=Hej!">
                 <mark className="relative py-1 px-3 rounded-full">taxiieskilstuna@gmail.com</mark>
             </a>
         </p>
