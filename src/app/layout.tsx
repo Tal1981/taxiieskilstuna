@@ -30,6 +30,9 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
         <meta name="viewport" content="width=device-width, initial-scale=1width=device-width, initial-scale=1.0, user-scalable=no" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11471828736">
           </script>
+          <script>
+            {`gtag('event', 'conversion', {'send_to': 'AW-11471828736/9ZoLCMzbu-UZEIDumN4q'});`}
+          </script>
           <GoogleTagManager gtmId="AW-11471828736" />    
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
