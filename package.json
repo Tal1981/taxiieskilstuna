@@ -12,9 +12,10 @@
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "@next/third-parties": "^15.0.3",
     "@types/react-google-recaptcha": "^2.1.9",
     "flatpickr": "^4.6.13",
-    "next": "14.2.14",
+    "next": "^15.0.3",
     "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",

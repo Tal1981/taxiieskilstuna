@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 // import { URL } from "url";
 
 const geistSans = localFont({
@@ -27,9 +28,13 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1width=device-width, initial-scale=1.0, user-scalable=no" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11471828736">
+          </script>
+          <GoogleTagManager gtmId="AW-11471828736" />    
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
           {children}
+          <GoogleAnalytics gaId="AW-11471828736" /> 
       </body>
     </html>
   );
