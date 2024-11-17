@@ -42,7 +42,7 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
           {children}
 
           {/* start google analysis */}
-          <GoogleAnalytics gaId="AW-11471828736" /> 
+          {/* {<GoogleAnalytics gaId="AW-11471828736" /> } */}
           {/* start google analysis */}
           
       </body>
