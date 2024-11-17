@@ -32,7 +32,10 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
         {/* start google adsense */}
           <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11471828736"></Script>
           {/* {<GoogleTagManager gtmId="AW-11471828736" />} */}
-          <Script id="script-gtag">
+          <Script id="script-gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11471828736');`}
+          </Script>
+          <Script id="script-conversion" strategy="afterInteractive">
             {`gtag('event', 'conversion', {'send_to': 'AW-11471828736/9ZoLCMzbu-UZEIDumN4q'});`}
           </Script>
         {/* stend google adsense */}
