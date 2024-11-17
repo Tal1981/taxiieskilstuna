@@ -27,7 +27,7 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1 width=device-width, initial-scale=1.0, user-scalable=no" />
 
         {/* start google adsense */}
           <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11471828736"></Script>
