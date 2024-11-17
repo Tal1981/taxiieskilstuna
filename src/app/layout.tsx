@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
+{/*import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'*/}
 import Script from "next/script";
 
 const geistSans = localFont({
