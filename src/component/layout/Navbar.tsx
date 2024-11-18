@@ -30,7 +30,7 @@ function Navbar( {darkMode,toggleDarkMode }:{darkMode:boolean, toggleDarkMode: (
                 </button>
             </div>
             <div className={`flex justify-end items-center gap-8 h-auto w-full font-thin pt-1 px-8`}>
-                <MenuItem title={"PRISAR"} />
+                <MenuItem title={"PRIS"} />
                 <MenuItem title={"SHOWCASE"} />
                 <MenuItem title={"KONTAKT"} />
             </div>
