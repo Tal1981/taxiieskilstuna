@@ -13,7 +13,7 @@ function Showcase({darkMode}:{darkMode:boolean}) {
                 src={'/logo_animated.gif'}
                 height={250}
                 width={400}
-                alt="taxi i eskilstuna animated photo"
+                alt="taxi i eskilstuna"
                 className="relative w-full"
                 style={{border:' 4px solid #7c7246'}}
                 sizes="max-width: 100%"
