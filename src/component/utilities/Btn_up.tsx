@@ -12,7 +12,8 @@ function Btn_up() {
     return (
             <button 
                 disabled ={ !isVisibleBtnUp }
-                id="btn_up" 
+                id="btn_up"
+                aria-label="button scroll up"
                 onClick={ handleScrollToUp } 
                 className={`flex justify-center items-center w-14 h-14 rounded-full bg-black text-orange-300 fixed top-3/4 right-2 z-50 transition-opacity duration-500 ${isVisibleBtnUp? 'opacity-70 hover:opacity-80':'opacity-0'}`}
                 >
