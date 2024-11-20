@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
-import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +25,12 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
 
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="viewport" content="width=device-width, initial-scale=1 width=device-width, initial-scale=1.0, user-scalable=no" />
+        {/* google-site-verification */}
         <meta name="google-site-verification" content="4JBMoAWxJqBBX5yDjYNmu7IAyx2ZJ_GYkmiX4Zbe5rs" />
+        {/* show website's title on social media */}
+        <meta property="og:title" content="Taxi i Eskilstuna" key="title" />
 
         {/* start google adsense */}
           <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11471828736"></Script>
@@ -40,7 +42,7 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
           </Script>
         {/* end google adsense */}
 
-      </Head>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
           {children}
       </body>
