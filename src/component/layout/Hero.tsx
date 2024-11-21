@@ -34,7 +34,7 @@ function Hero({darkMode}:{darkMode:boolean}) {
                 <div className="absolute inset-0 bg-cover bg-center opacity-10 w-full max-w-full"  style={{ backgroundImage: "url('../../transition/bkg_hero.jpg')", filter:filter }}></div>
                 <div className="absolute inset-0 bg-cover bg-center opacity-10 map w-full max-w-full"  style={{ backgroundImage: "url('../karta.png')", filter:filter }}></div>
             </div>
-            <Image id="PRIS" className="w-full max-w-full h-auto mb-0 lg:-mb-24 md:-mb-20 sm:-mb-9" src={ transition } alt="transition" height={250} width={400}/>
+            <Image id="PRISER" className="w-full max-w-full h-auto mb-0 lg:-mb-24 md:-mb-20 sm:-mb-9" src={ transition } alt="transition" height={250} width={400}/>
         </section>
     )
 
