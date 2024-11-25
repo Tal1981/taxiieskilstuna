@@ -26,7 +26,7 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1 width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         {/* google-site-verification */}
         <meta name="google-site-verification" content="4JBMoAWxJqBBX5yDjYNmu7IAyx2ZJ_GYkmiX4Zbe5rs" />
         {/* show website's title on social media */}
@@ -44,6 +44,19 @@ export default function RootLayout( {children,}: Readonly<{children: React.React
 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
+          {/* Start Clixtell Tracking Code */}
+          <Script id="clixtell-tracking" strategy="afterInteractive" dangerouslySetInnerHTML={{
+              __html: `
+                  var script=document.createElement('script');
+                  var prefix=document.location.protocol;
+                  script.async=true;script.type='text/javascript';
+                  var target=prefix + '//scripts.clixtell.com/track.js';
+                  script.src=target;var elem=document.head;
+                  elem.appendChild(script);
+              `
+          }} />
+          <noscript><img src='//tracker.clixtell.com/track/t.gif'/></noscript>
+          {/* End Clixtell Tracking Code */}             
           {children}
       </body>
     </html>
