@@ -10,7 +10,7 @@ function Hero({darkMode}:{darkMode:boolean}) {
 
     return (
         <section className="w-full" >
-            <div id="hero" className="min-h-fit px-8 sm:px-12 md:px-20 pt-[10rem] pb-7 bg-gold relative flex  flex-col  sm:flex-row justify-center sm:justify-between items-center gap-2">
+            <div id="hero" className="min-h-fit px-8 sm:px-12 md:px-20 pt-[9rem] pb-7 bg-gold relative flex  flex-col  sm:flex-row justify-center sm:justify-between items-center gap-2">
                 <div className="w-full md:w-2/5 flex flex-col items-center z-20 pointer-events-none mt-7 sm:-mt-2 gap-3">
                     <Typing/>
                     <a href="tel:+46762259996" className="z-50">
