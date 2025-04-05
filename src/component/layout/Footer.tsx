@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Img from "@/../public/logo.png";
+import Link from 'next/link';
 
-function Footer({darkMode}:{darkMode:boolean}) {
+function Footer({ darkMode }: { darkMode: boolean }) {
 
-    const filter = darkMode ? "invert(1)":"";
+    const filter = darkMode ? "invert(1)" : "";
 
-    return(
+    return (
         <section className="w-full">
             <div id="footer" className="relative h-fit p-4 bg-gold flex justify-between items-center">
                 <Image
@@ -16,14 +17,16 @@ function Footer({darkMode}:{darkMode:boolean}) {
                     sizes="max-width: 100%"
                 />
                 <div className="w-fit bg-gray-950 px-2 py-1 text-sm rounded-md border-b-4 border-red-600 drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]">
-                    <code> 
-                        <span className="text-cyan-300">Developed by...</span>
-                        <span className="text-green-300"> taltek</span>  
+                    <code>
+                        <Link href="mailto:orange1981t@gmail.com">
+                            <span className="text-cyan-300">Developed by...</span>
+                            <span className="text-green-300"> taltek</span>
+                        </Link>
                     </code>
                 </div>
-                <div className="absolute inset-0 bg-cover bg-center opacity-20 max-w-full"  style={{ backgroundImage: "url('../../transition/bkg_hero.jpg')", filter:filter }}></div>
+                <div className="absolute inset-0 bg-cover bg-center opacity-20 max-w-full" style={{ backgroundImage: "url('../../transition/bkg_hero.jpg')", filter: filter }}></div>
             </div>
-        </section> 
+        </section>
     )
 }
 
