@@ -81,8 +81,6 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
                     setIsLoading(false);
                     setStatus("Meddelandet har skickats");
 
-                    console.log(responseData);
-
                     email.value = "";
                     firstName.value = "";
                     lastName.value = "";
