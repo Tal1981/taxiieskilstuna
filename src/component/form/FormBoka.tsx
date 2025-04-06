@@ -14,16 +14,16 @@ interface FormData {
     message?: string | undefined;
 }
 
-const FormBoka = ( {tabActive}:{tabActive:string} ) => {
+const FormBoka = ({ tabActive }: { tabActive: string }) => {
 
-    const [isLoading, setIsLoading] : [boolean, Dispatch<SetStateAction<boolean>>] = useState<boolean>(false);
-    const [status, setStatus] : [string | undefined,  Dispatch<SetStateAction<string | undefined>>] = useState<string|undefined>("");
-    const [captcha, setCaptcha] : [string | null | undefined,  Dispatch<SetStateAction<string | null| undefined>>] = useState<string | null| undefined>();
+    const [isLoading, setIsLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState<boolean>(false);
+    const [status, setStatus]: [string | undefined, Dispatch<SetStateAction<string | undefined>>] = useState<string | undefined>("");
+    const [captcha, setCaptcha]: [string | null | undefined, Dispatch<SetStateAction<string | null | undefined>>] = useState<string | null | undefined>();
 
-    const handleSubmit = async( event: FormEvent<HTMLFormElement> ) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        if( captcha ) {
+        if (captcha) {
 
             const form = event.currentTarget;
 
@@ -37,46 +37,45 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
             const date = form.elements.namedItem('date') as HTMLTextAreaElement;
             const message = form.elements.namedItem('message') as HTMLTextAreaElement;
 
-            const data : FormData =
+            const data: FormData =
             {
-                email : String(email.value),
-                firstName : String(firstName.value),
-                lastName : String(lastName.value),
+                email: String(email.value),
+                firstName: String(firstName.value),
+                lastName: String(lastName.value),
                 source: String(source.value),
                 destination: String(destination.value),
-                phone : String(phone.value),
+                phone: String(phone.value),
                 date: String(date.value),
                 message: String(message.value),
             };
 
             // Validation for all input fields.
-            if( !date.value || !email.value || 
+            if (!date.value || !email.value ||
                 !firstName.value || !lastName.value ||
                 !source.value || !destination.value ||
-                !phone.value ) 
-            {
+                !phone.value) {
                 setStatus("Vänligen fyll i alla fält");
 
             } else {
 
-                try{
+                try {
                     setIsLoading(true);
-                    
-                    const response = await fetch('/api/contact',{
+
+                    const response = await fetch('/api/contact', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                         },
-                        body:  JSON.stringify(data),
+                        body: JSON.stringify(data),
                     })
-        
+
                     if (!response.ok) {
 
                         setStatus("Could not send your message! try again.")
                         throw new Error('Network response was not ok');
                     }
-        
-                    const responseData = await response.json();
+
+                    await response.json();
 
                     setIsLoading(false);
                     setStatus("Meddelandet har skickats");
@@ -89,11 +88,11 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
                     phone.value = "";
                     date.value = "";
                     message.value = "";
-        
+
                 } catch (error) {
 
                     setStatus("Could not send your message! try again.")
-                    console.error('Error:', error); 
+                    console.error('Error:', error);
                 }
             }
 
@@ -103,7 +102,7 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
 
         }
 
-        setTimeout(()=> {
+        setTimeout(() => {
 
             setIsLoading(false);
             setStatus("")
@@ -112,8 +111,8 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
     }
 
 
-    return(
-        <form className={`max-w-md mx-auto mt-6 ${tabActive === "Boka" ? "block":"hidden"}`} onSubmit={handleSubmit} >
+    return (
+        <form className={`max-w-md mx-auto mt-6 ${tabActive === "Boka" ? "block" : "hidden"}`} onSubmit={handleSubmit} >
 
             <div className="relative z-0 w-full mb-5 group">
                 <input type="email" name="email" id="email" maxLength={100} className="block py-2.5 px-1 w-full text-sm bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" " pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
@@ -152,14 +151,14 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
             <div className="grid md:grid-cols-1">
                 <label htmlFor="datetime" className="text-sm mb-1 tracking-wider block">Bokningstid</label>
                 <div className="z-0 w-full mb-5 group h-10 py-2.5 text-sm bg-transparent border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:border-blue-600 peer active:outline-none">
-                    <FlatpickrComp/>
+                    <FlatpickrComp />
                 </div>
             </div>
 
             <div className="grid  md:gap-6">
                 <div className="relative z-0 w-full mb-5 group">
                     <label htmlFor="message" className="text-sm tracking-wider">Beskrivning ( valfri )</label>
-                    <textarea  name="message" id="message" maxLength={1000} className="block py-2.5 px-1 w-full min-w-full min-h-28 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none"  placeholder=" Skriv här ..." />
+                    <textarea name="message" id="message" maxLength={1000} className="block py-2.5 px-1 w-full min-w-full min-h-28 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer active:outline-none" placeholder=" Skriv här ..." />
                 </div>
             </div>
 
@@ -169,11 +168,11 @@ const FormBoka = ( {tabActive}:{tabActive:string} ) => {
                 </div>
             </div>
 
-            <p className="h-5 text-wrap pb-5 text-orange-500 font-medium underline underline-offset-8 text-center">{ status }</p>
+            <p className="h-5 text-wrap pb-5 text-orange-500 font-medium underline underline-offset-8 text-center">{status}</p>
 
-            <button disabled={ isLoading } type="submit" className={`tracking-wide shadowButton flex justify-center items-center gap-1 text-white text-lg mt-6 bg-orange-500 hover:bg-orange-600 focus:outline-none font-medium rounded-lg w-full sm:w-52 px-5 py-2.5 text-center active:border-0 active:border-none active:translate-y-1 focus:border-none focus:border-0 ${ isLoading? "translate-y-1 border-0 border-none": "border-b-4 border-orange-400"}`} >
-                <svg className="h-5 w-5 text-slate-100"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />  <line x1="16" y1="2" x2="16" y2="6" />  <line x1="8" y1="2" x2="8" y2="6" />  <line x1="3" y1="10" x2="21" y2="10" /></svg>
-                <span>{ isLoading? "Loading..." : "Boka" }</span>
+            <button disabled={isLoading} type="submit" className={`tracking-wide shadowButton flex justify-center items-center gap-1 text-white text-lg mt-6 bg-orange-500 hover:bg-orange-600 focus:outline-none font-medium rounded-lg w-full sm:w-52 px-5 py-2.5 text-center active:border-0 active:border-none active:translate-y-1 focus:border-none focus:border-0 ${isLoading ? "translate-y-1 border-0 border-none" : "border-b-4 border-orange-400"}`} >
+                <svg className="h-5 w-5 text-slate-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />  <line x1="16" y1="2" x2="16" y2="6" />  <line x1="8" y1="2" x2="8" y2="6" />  <line x1="3" y1="10" x2="21" y2="10" /></svg>
+                <span>{isLoading ? "Loading..." : "Boka"}</span>
             </button>
 
         </form>
