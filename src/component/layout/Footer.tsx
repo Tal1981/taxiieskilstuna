@@ -16,7 +16,7 @@ function Footer({ darkMode }: { darkMode: boolean }) {
                     style={{ filter: 'grayscale(0.7)' }}
                     sizes="max-width: 100%"
                 />
-                <div className="w-fit bg-gray-950 px-2 py-1 text-sm rounded-md border-b-4 border-red-600 drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]">
+                <div className="w-fit bg-gray-950 px-2 py-1 text-sm z-50 rounded-md border-b-4 border-red-600 drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]">
                     <code>
                         <Link href="mailto:orange1981t@gmail.com">
                             <span className="text-cyan-300">Developed by...</span>
