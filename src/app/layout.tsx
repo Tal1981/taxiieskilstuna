@@ -48,15 +48,22 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         {/* show website's title on social media */}
         <meta property="og:title" content="Taxi i Eskilstuna" key="title" />
 
-        {/* start google adsense */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11471828736"></Script>
-        <Script id="script-gtag" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11471828736');`}
+        {/* start Google Ads */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-674459134"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-674459134');
+          `}
         </Script>
-        <Script id="script-conversion" strategy="afterInteractive">
-          {`gtag('event', 'conversion', {'send_to': 'AW-11471828736/9ZoLCMzbu-UZEIDumN4q'});`}
-        </Script>
-        {/* end google adsense */}
+        {/* end Google Ads */}
 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
