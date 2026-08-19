@@ -26,12 +26,14 @@ export default async function API(req, res) {
         },
     });
 
+
     try {
         await transporter.sendMail({
-            from: `"${firstName} ${lastName}" <${email}>`,
+            from: email,
+            replyTo: email,
             to: "taxiieskilstuna@gmail.com",
             subject: `En ny bookning: [${generateRandomNumber()}-${date}]`,
-            html: `<b>((Ny bookning))</b>
+            html: `<b>( Ny bookning )</b>
              <p>................................</p>
              <h1>Kunduppgifter</h1>
                 <table style="border:2px double #999">

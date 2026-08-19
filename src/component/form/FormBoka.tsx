@@ -1,7 +1,9 @@
 import { Dispatch, FormEvent, SetStateAction, useState } from "react";
 import FlatpickrComp from "./FlatpickrComp";
 import ReCAPTCHA from "react-google-recaptcha";
+import SuccessOverlay from "../utilities/SuccessOverlay";
 import "@/app/globals.css";
+
 
 interface FormData {
     firstName?: string;
@@ -19,6 +21,7 @@ const FormBoka = ({ tabActive }: { tabActive: string }) => {
     const [isLoading, setIsLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState<boolean>(false);
     const [status, setStatus]: [string | undefined, Dispatch<SetStateAction<string | undefined>>] = useState<string | undefined>("");
     const [captcha, setCaptcha]: [string | null | undefined, Dispatch<SetStateAction<string | null | undefined>>] = useState<string | null | undefined>();
+    const [showSuccess, setShowSuccess]: [boolean, Dispatch<SetStateAction<boolean>>] = useState<boolean>(false);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -78,7 +81,9 @@ const FormBoka = ({ tabActive }: { tabActive: string }) => {
                     await response.json();
 
                     setIsLoading(false);
-                    setStatus("Meddelandet har skickats");
+                    setStatus("Bokningen har skickats");
+                    /*test*/
+                    setShowSuccess(true);
 
                     email.value = "";
                     firstName.value = "";
@@ -105,13 +110,17 @@ const FormBoka = ({ tabActive }: { tabActive: string }) => {
         setTimeout(() => {
 
             setIsLoading(false);
-            setStatus("")
+            setStatus("");
+            setShowSuccess(false);
 
         }, 4000)
     }
 
 
     return (
+    <>
+        <SuccessOverlay show={showSuccess} message="Bokningen har skickats" />
+
         <form className={`max-w-md mx-auto mt-6 ${tabActive === "Boka" ? "block" : "hidden"}`} onSubmit={handleSubmit} >
 
             <div className="relative z-0 w-full mb-5 group">
@@ -176,6 +185,7 @@ const FormBoka = ({ tabActive }: { tabActive: string }) => {
             </button>
 
         </form>
+    </>
     )
 }
 

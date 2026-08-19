@@ -1,6 +1,8 @@
 import { Dispatch, FormEvent, SetStateAction, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import SuccessOverlay from "../utilities/SuccessOverlay";
 import "@/app/globals.css";
+
 
 interface FormData {
     firstName?: string;
@@ -15,6 +17,7 @@ const FormKontakta = ({ tabActive }: { tabActive: string }) => {
     const [isLoading, setIsLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState<boolean>(false);
     const [status, setStatus]: [string, Dispatch<SetStateAction<string>>] = useState<string>("");
     const [captcha, setCaptcha]: [string | null | undefined, Dispatch<SetStateAction<string | null | undefined>>] = useState<string | null | undefined>();
+    const [showSuccess, setShowSuccess]: [boolean, Dispatch<SetStateAction<boolean>>] = useState<boolean>(false);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -69,7 +72,8 @@ const FormKontakta = ({ tabActive }: { tabActive: string }) => {
                     await response.json();
 
                     setIsLoading(false);
-                    setStatus("Meddelandet har skickats")
+                    setStatus("Meddelandet har skickats");
+                    setShowSuccess(true);
 
                     email.value = "";
                     firstName.value = "";
@@ -94,12 +98,16 @@ const FormKontakta = ({ tabActive }: { tabActive: string }) => {
         setTimeout(() => {
 
             setIsLoading(false);
-            setStatus("")
+            setStatus("");
+            setShowSuccess(false);
 
         }, 4000)
     }
 
     return (
+    <>
+        <SuccessOverlay show={showSuccess} message="Meddelandet har skickats" />
+
         <form className={`max-w-md mx-auto mt-6 ${tabActive === "Kontakta" ? "block" : "hidden"}`} onSubmit={handleSubmit} >
 
             <div className="relative z-0 w-full mb-5 group">
@@ -145,6 +153,7 @@ const FormKontakta = ({ tabActive }: { tabActive: string }) => {
                 <span>{isLoading ? "Loading..." : "Skicka"}</span>
             </button>
         </form>
+    </>
     )
 };
 

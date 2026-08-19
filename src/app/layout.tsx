@@ -20,28 +20,18 @@ export const metadata: Metadata = {
   title: "Taxi i Eskilstuna",
   description: "ett billigt Taxi företag i Eskiltuna i Sverige, cheaper taxi in Eskilstuna in Sweden",
   metadataBase: new URL("https://taxiieskilstuna.com"),
-  keywords: ["taxi", "eskilstuna", "sweden", "sverige", "flygplatstaxi", "billig taxi", "stor taxi", "taxi i eskilstuna", "snabb taxi", "natt taxi", "taxi runt 24 timmar"],
+  keywords: [
+    "taxi", "eskilstuna", "sweden", "sverige", "flygplats taxi", "billig taxi", "stor taxi",
+     "taxi i eskilstuna", "snabb taxi", "natt taxi", "taxi runt 24 timmar", "Västerås flygplats",
+      "Skavsta flygplats", "Arlanda flygplats", "Stockholm", "Bromma flygplats"
+    ],
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
 
   return (
-    <html lang="en">
+    <html lang="sv">
       <head>
-        {/* <!-- Fraud Blocker Tracker --> */}
-        <Script id="fraudblocker-script-loader" type="text/javascript"
-          strategy="afterInteractive" dangerouslySetInnerHTML={{
-            __html: `
-                (function () {
-                  var s = document.createElement("script");
-                  var h = document.head;
-                  s.async = true;
-                  s.src = "https://monitor.fraudblocker.com/fbt.js?sid=gNd1rsNNeneUmQHp8MROG";
-                  h.appendChild(s);
-                })();
-              `
-          }} />
-        {/* <!-- End Fraud Blocker Tracker --> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         {/* google-site-verification */}
         <meta name="google-site-verification" content="4JBMoAWxJqBBX5yDjYNmu7IAyx2ZJ_GYkmiX4Zbe5rs" />
@@ -67,25 +57,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-        {/* <!-- Fraud Blocker Tracker --> */}
-        <noscript>
-          <Link
-            href="https://fraudblocker.com"
-            rel="nofollow"
-          >
-            <Image
-              src="https://monitor.fraudblocker.com/fbt.gif?sid=gNd1rsNNeneUmQHp8MROG"
-              alt="Fraud Blocker"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              unoptimized
-              priority
-            />
-          </Link>
-        </noscript>
-        {/* <!-- End Fraud Blocker Tracker --> */}
         {children}
       </body>
     </html>
