@@ -14,7 +14,16 @@ export default async function API(req, res) {
         return res.status(405).json({ message: "Method not allowed" });
     }
     
-    const { firstName, lastName, source, destination, phone, email, date, message } = req.body;
+    const {
+         firstName, 
+         lastName, 
+         source, 
+         destination, 
+         phone, 
+         email, 
+         date, 
+         message 
+        } = req.body;
 
     const transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
@@ -29,11 +38,11 @@ export default async function API(req, res) {
 
     try {
         await transporter.sendMail({
-            from: email,
+            from: `"${firstName} ${lastName}" <${email}>`,
             replyTo: email,
             to: "taxiieskilstuna@gmail.com",
             subject: `En ny bookning: [${generateRandomNumber()}-${date}]`,
-            html: `<b>( Ny bookning )</b>
+            html: `<b>(Ny bookning)</b>
              <p>................................</p>
              <h1>Kunduppgifter</h1>
                 <table style="border:2px double #999">
@@ -93,6 +102,8 @@ export default async function API(req, res) {
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: "Could not send the message. Your message was not sent!" });
+        res.status(500).json({ 
+            message: "Could not send the message. Your message was not sent!" 
+        });
     }
 }
